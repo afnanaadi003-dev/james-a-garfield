@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James A. Garfield Presidential Archive & Leadership Portal (20th President)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mahogany: {
+                            950: '#0e0809',
+                            900: '#1c0f12',
+                            800: '#34181c',
+                            700: '#4d2026',
+                            600: '#682931',
+                            gold: '#d4af37',
+                            goldlight: '#f3e5ab',
+                            amber: '#c5a059',
+                            sand: '#f9f6f0',
+                            sepia: '#2a1a14'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0e0809; }
+        ::-webkit-scrollbar-thumb { background: #34181c; border-radius: 4px; border: 1px solid #d4af37; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+
+        .glass-nav {
+            background: rgba(28, 15, 18, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(14, 8, 9, 0.94) 0%, rgba(52, 24, 28, 0.88) 100%), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg');
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .garfield-card {
+            background: rgba(36, 18, 22, 0.75);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            backdrop-filter: blur(8px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .garfield-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.65);
+            box-shadow: 0 16px 32px -8px rgba(212, 175, 55, 0.25);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-mahogany-950 text-slate-100 antialiased selection:bg-mahogany-gold selection:text-mahogany-950">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-mahogany-gold via-mahogany-goldlight to-mahogany-amber text-mahogany-950 text-xs font-bold py-1.5 px-4 text-center tracking-wider uppercase shadow-md flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-scroll text-mahogany-900"></i>
+        <span>OFFICIAL JAMES A. GARFIELD PRESIDENTIAL ARCHIVE &bull; 20TH U.S. PRESIDENT</span>
+        <i class="fa-solid fa-scroll text-mahogany-900"></i>
+    </div>
+
+    <!-- STICKY GLASSMORPHISM NAVBAR -->
+    <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-mahogany-gold to-amber-200 flex items-center justify-center text-mahogany-950 font-bold shadow-lg group-hover:scale-105 transition-transform border border-amber-300">
+                        <span class="font-cinzel text-lg font-black">JAG</span>
+                    </div>
+                    <div>
+                        <span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-slate-100 block group-hover:text-mahogany-gold transition-colors">JAMES A. GARFIELD</span>
+                        <span class="text-xs text-mahogany-gold font-mono block tracking-widest uppercase">20th U.S. President (1881)</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-5 text-xs uppercase tracking-wider font-semibold">
+                    <a href="#bio" class="hover:text-mahogany-gold transition-colors py-1">Biography</a>
+                    <a href="#works-slider" class="hover:text-mahogany-gold transition-colors py-1">10 Accomplishments</a>
+                    <a href="#treatise" class="hover:text-mahogany-gold transition-colors py-1">Historical Treatise</a>
+                    <a href="#civil-rights" class="hover:text-mahogany-gold transition-colors py-1">Education & Civil Rights</a>
+                    <a href="#lucretia-family" class="hover:text-mahogany-gold transition-colors py-1">Lucretia & Lineage</a>
+                    <a href="#cabinet" class="hover:text-mahogany-gold transition-colors py-1">Cabinet</a>
+                    <a href="#books" class="hover:text-mahogany-gold transition-colors py-1">Literature</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="toggleSearchModal()" class="p-2.5 text-mahogany-gold hover:text-white rounded-full hover:bg-mahogany-800 transition-colors border border-mahogany-gold/30" title="Search Archive">
+                        <i class="fa-solid fa-magnifying-glass text-base"></i>
+                    </button>
+                    <button onclick="window.print()" class="bg-gradient-to-r from-mahogany-gold to-mahogany-amber text-mahogany-950 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:from-amber-300 hover:to-mahogany-gold transition-all shadow-md flex items-center space-x-2 border border-amber-200">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Export Archive</span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center space-x-2">
+                    <button onclick="toggleSearchModal()" class="p-2 text-mahogany-gold hover:text-white">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2 text-slate-200 hover:text-mahogany-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-mahogany-950 border-b border-mahogany-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#bio" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">Biographical Overview</a>
+            <a href="#works-slider" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">10 Major Accomplishments</a>
+            <a href="#treatise" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">1,200+ Word Historical Treatise</a>
+            <a href="#civil-rights" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">Education & Civil Rights Vision</a>
+            <a href="#lucretia-family" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">Lucretia Garfield & Family Tree</a>
+            <a href="#cabinet" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2 border-b border-mahogany-900">Cabinet & Allies</a>
+            <a href="#books" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-mahogany-gold py-2">Literature & Speeches Shelf</a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO & EXECUTIVE METRICS -->
+    <section id="hero" class="relative hero-bg py-24 lg:py-32 overflow-hidden border-b border-mahogany-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Title & Presidential Quotes -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-mahogany-800/80 border border-mahogany-gold/40 px-3.5 py-1.5 rounded-full text-mahogany-gold text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-star"></i>
+                        <span>20th President &bull; Union Major General &bull; 9-Term Congressman</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        Intellectual Leadership & <span class="gold-gradient-text">Executive Independence</span>
+                    </h1>
+
+                    <blockquote class="text-slate-200 text-lg sm:text-xl leading-relaxed font-merriweather border-l-4 border-mahogany-gold pl-4 italic">
+                        "If the Next Generation is to be ignorant, we must prepare to turn over all the agencies of society to ignorance. Freedom can exist only where education is universal."
+                        <span class="block font-sans text-xs font-bold text-mahogany-gold not-italic mt-2 uppercase tracking-wider">&mdash; Inaugural Address, March 4, 1881</span>
+                    </blockquote>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#works-slider" class="bg-gradient-to-r from-mahogany-gold to-mahogany-amber text-mahogany-950 font-bold px-7 py-3.5 rounded-xl shadow-lg hover:brightness-110 transition-all flex items-center space-x-2">
+                            <span>Explore 10 Major Works</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#treatise" class="bg-mahogany-900/90 hover:bg-mahogany-800 text-slate-100 border border-mahogany-gold/50 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-book-open text-mahogany-gold"></i>
+                            <span>Read Historical Treatise</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Official Portrait & Snapshot Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-mahogany-900/90 backdrop-blur-md border-2 border-mahogany-gold/40 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+                        <div class="absolute -top-3.5 -right-3.5 bg-mahogany-gold text-mahogany-950 px-3.5 py-1 rounded-md font-bold text-xs uppercase tracking-wider shadow border border-amber-300">
+                            Presidential Portrait
+                        </div>
+                        
+                        <div class="mb-6 rounded-xl overflow-hidden border border-mahogany-gold/30 shadow-inner max-h-72">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg" alt="President James A. Garfield" class="w-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <h3 class="text-xl font-bold font-cinzel text-mahogany-gold mb-4 border-b border-mahogany-800 pb-2 flex items-center">
+                            <i class="fa-solid fa-landmark mr-2"></i> Key Presidential Metrics
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-mahogany-950/80 p-3.5 rounded-xl border border-mahogany-700/60 text-center">
+                                <div class="text-2xl font-extrabold text-mahogany-gold">200 Days</div>
+                                <div class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold mt-1">Presidency Tenure</div>
+                            </div>
+                            <div class="bg-mahogany-950/80 p-3.5 rounded-xl border border-mahogany-700/60 text-center">
+                                <div class="text-2xl font-extrabold text-white">9 Terms</div>
+                                <div class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold mt-1">U.S. House of Reps</div>
+                            </div>
+                            <div class="bg-mahogany-950/80 p-3.5 rounded-xl border border-mahogany-700/60 text-center">
+                                <div class="text-2xl font-extrabold text-amber-300">Major Gen</div>
+                                <div class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold mt-1">Union Army (Civil War)</div>
+                            </div>
+                            <div class="bg-mahogany-950/80 p-3.5 rounded-xl border border-mahogany-700/60 text-center">
+                                <div class="text-2xl font-extrabold text-emerald-400">Log Cabin</div>
+                                <div class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold mt-1">Last Born in Cabin</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: BIOGRAPHY & TIMELINE -->
+    <section id="bio" class="py-20 bg-mahogany-950 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">Life & Public Service</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel mt-1">Biographical Trajectory</h2>
+                <div class="w-24 h-1 bg-mahogany-gold mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-300 text-base sm:text-lg">From poverty in an Ohio log cabin to scholar, Union General, Congressional leader, and 20th U.S. President.</p>
+            </div>
+
+            <!-- Key Fact Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div class="bg-mahogany-900/60 p-6 rounded-xl border border-mahogany-800 text-center">
+                    <i class="fa-solid fa-graduation-cap text-3xl text-mahogany-gold mb-3"></i>
+                    <h3 class="text-lg font-bold text-white font-cinzel">Scholar & Classics Professor</h3>
+                    <p class="text-xs text-slate-300 mt-2 font-merriweather">Williams College graduate; President of Western Reserve Eclectic Institute (Hiram College) by age 26.</p>
+                </div>
+                <div class="bg-mahogany-900/60 p-6 rounded-xl border border-mahogany-800 text-center">
+                    <i class="fa-solid fa-person-military-rifle text-3xl text-amber-400 mb-3"></i>
+                    <h3 class="text-lg font-bold text-white font-cinzel">Civil War Union Hero</h3>
+                    <p class="text-xs text-slate-300 mt-2 font-merriweather">Promoted to Major General after distinguished valor at Middle Creek, Shiloh, and Chickamauga.</p>
+                </div>
+                <div class="bg-mahogany-900/60 p-6 rounded-xl border border-mahogany-800 text-center">
+                    <i class="fa-solid fa-building-columns text-3xl text-emerald-400 mb-3"></i>
+                    <h3 class="text-lg font-bold text-white font-cinzel">18 Years in Congress</h3>
+                    <p class="text-xs text-slate-300 mt-2 font-merriweather">Served 9 terms in the House (1863–1881), emerging as Chairman of Appropriations & Republican Leader.</p>
+                </div>
+                <div class="bg-mahogany-900/60 p-6 rounded-xl border border-mahogany-800 text-center">
+                    <i class="fa-solid fa-flag-usa text-3xl text-yellow-300 mb-3"></i>
+                    <h3 class="text-lg font-bold text-white font-cinzel">20th U.S. President</h3>
+                    <p class="text-xs text-slate-300 mt-2 font-merriweather">Nominated on 36th ballot as dark-horse candidate; defended executive authority over patronage machine.</p>
+                </div>
+            </div>
+
+            <!-- Narrative Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="bg-mahogany-900/40 p-8 rounded-2xl border border-mahogany-800 space-y-4 text-slate-200 font-merriweather leading-relaxed">
+                    <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">Early Humble Beginnings & Polymath Scholar</h3>
+                    <p class="text-sm">
+                        James Abram Garfield was born on November 19, 1831, in Moreland Hills, Ohio. Raised by his widowed mother Eliza Ballou Garfield in a humble log cabin after his father died when James was just two years old, Garfield worked on towpaths and farms to finance his education.
+                    </p>
+                    <p class="text-sm">
+                        Demonstrating extraordinary intellectual aptitude, he mastered Latin and Greek, graduated with honors from Williams College in 1856, and became a professor and president of the Western Reserve Eclectic Institute (now Hiram College) at age 26. Ambidextrous and mathematically gifted, Garfield published an original geometric proof of the Pythagorean Theorem in 1876.
+                    </p>
+                </div>
+
+                <div class="bg-mahogany-900/40 p-8 rounded-2xl border border-mahogany-800 space-y-4 text-slate-200 font-merriweather leading-relaxed">
+                    <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">Civil War Command & Congressional Leadership</h3>
+                    <p class="text-sm">
+                        With the outbreak of the Civil War in 1861, Garfield entered Union service as Colonel of the 42nd Ohio Infantry. After securing a strategic victory at Middle Creek, Kentucky, he was promoted to Brigadier General at age 30 and later served as Chief of Staff to General William Rosecrans at the Battle of Chickamauga, earning promotion to Major General.
+                    </p>
+                    <p class="text-sm font-sans text-slate-300 border-l-2 border-mahogany-gold pl-3 my-2">
+                        At President Lincoln's request, Garfield resigned his army commission in December 1863 to take a seat in the U.S. House of Representatives, where he championed sound currency, civil rights, and federal education over 18 years.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 10 NOTABLE WORKS SLIDER -->
+    <section id="works-slider" class="py-20 bg-mahogany-900/30 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">Historic Actions & Leadership</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel mt-1">10 Major Accomplishments</h2>
+                </div>
+                <!-- Carousel Controls -->
+                <div class="flex space-x-3 mt-4 md:mt-0">
+                    <button id="slider-prev" onclick="moveSlider(-1)" class="w-12 h-12 rounded-full bg-mahogany-900 border border-mahogany-gold/40 text-slate-100 hover:bg-mahogany-gold hover:text-mahogany-950 transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="slider-next" onclick="moveSlider(1)" class="w-12 h-12 rounded-full bg-mahogany-900 border border-mahogany-gold/40 text-slate-100 hover:bg-mahogany-gold hover:text-mahogany-950 transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slider Track -->
+            <div class="relative overflow-hidden">
+                <div id="slider-track" class="flex transition-transform duration-500 ease-in-out gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-mahogany-gold/20 text-mahogany-gold border border-mahogany-gold/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #1 &bull; March 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Asserting Executive Independence</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Defied Senator Roscoe Conkling's "Stalwart" machine by nominating William H. Robertson to the Collector of the Port of New York, dismantling boss-rule over executive appointments.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Executive Power</span>
+                            <button onclick="openWorkModal(0)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #2 &bull; April 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Exposing Star Route Fraud</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Ordered an immediate, unyielding investigation into postal contract corruption, exposing millions in fraudulent mail route kickbacks despite involvement by party allies.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Anti-Corruption</span>
+                            <button onclick="openWorkModal(1)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #3 &bull; March 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Universal Education Advocacy</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Advocated for federally funded public education, identifying universal literacy as the essential prerequisite for preserving American democracy and African American equality.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Civil Rights & Education</span>
+                            <button onclick="openWorkModal(2)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #4 &bull; May 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Appointment of Frederick Douglass</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Appointed legendary abolitionist Frederick Douglass as Recorder of Deeds for Washington D.C., cementing Black leadership in federal office.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>African American Leadership</span>
+                            <button onclick="openWorkModal(3)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #5 &bull; 1881–1883</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Civil Service Reform Catalyst</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Garfield's tragic assassination by a disappointed office-seeker galvanized the nation to pass the historic 1883 Pendleton Civil Service Reform Act.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Pendleton Act Origin</span>
+                            <button onclick="openWorkModal(4)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #6 &bull; May 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">National Debt Refinancing</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Successfully refinanced $200 million in maturing Civil War bonds without congressional legislation, reducing interest rates from 6% to 3.5% and saving taxpayers millions.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Fiscal Management</span>
+                            <button onclick="openWorkModal(5)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-ship"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #7 &bull; June 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Naval Modernization Planning</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed font-merriweather">
+                                Initiated critical reviews under Navy Secretary William H. Hunt to replace wooden Civil War vessels with modern steel-hulled warships.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>New Steel Navy</span>
+                            <button onclick="openWorkModal(6)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #8 &bull; 1881</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Pan-American Diplomacy Initiative</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Formulated plans with Secretary of State James G. Blaine for a Pan-American Conference to expand Latin American trade and peacefully arbitrate regional disputes.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Foreign Policy</span>
+                            <button onclick="openWorkModal(7)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-300 border border-orange-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-square-root-variable"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #9 &bull; 1876</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Pythagorean Theorem Proof</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                While serving in Congress, published an original geometric proof of the Pythagorean Theorem using a trapezoid, published in the <em>New England Journal of Education</em>.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Mathematical Scholar</span>
+                            <button onclick="openWorkModal(8)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 garfield-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-person-military-pointing"></i>
+                            </div>
+                            <span class="text-xs font-mono text-mahogany-gold font-semibold uppercase">Act #10 &bull; 1861–1863</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2 font-cinzel">Civil War Union Military Command</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-merriweather">
+                                Commanded Union forces at the Battle of Middle Creek, served at Shiloh, and managed staff operations during the Battle of Chickamauga.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-mahogany-800 flex items-center justify-between text-xs text-mahogany-gold font-mono">
+                            <span>Union Major General</span>
+                            <button onclick="openWorkModal(9)" class="underline hover:text-white">Detail</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: 1,200+ WORD HISTORICAL TREATISE -->
+    <section id="treatise" class="py-20 bg-mahogany-950 border-b border-mahogany-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="bg-mahogany-800 text-mahogany-gold border border-mahogany-gold/40 px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase">Exhaustive Historical Analysis</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-cinzel mt-4">1,200+ Word Historical Treatise</h2>
+                <div class="w-24 h-1 bg-mahogany-gold mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-300 text-xs font-mono">Log Cabin Origins, Executive Independence & Civil Service Legacy</p>
+            </div>
+
+            <!-- Treatise Article Card -->
+            <article class="bg-mahogany-900/60 p-8 sm:p-12 rounded-2xl border border-mahogany-800 text-slate-200 font-merriweather leading-relaxed space-y-6 text-sm sm:text-base shadow-xl">
+                
+                <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">I. From the Frontier Log Cabin to the Halls of Academe</h3>
+                <p>
+                    James Abram Garfield's trajectory represents one of the most remarkable stories of self-made achievement in American political history. Born on November 19, 1831, in a modest log cabin in Moreland Hills, Ohio, Garfield was the last American president to be born in a log cabin. His father, Abram Garfield, died when James was just two years old, leaving his mother, Eliza Ballou Garfield, to manage the family farm in poverty.
+                </p>
+                <p>
+                    Determined to overcome his impoverished beginnings, young Garfield worked as a canal boy on the Ohio and Erie Canal, driving mule teams to fund his early education. Exhibiting an extraordinary intellect and an appetite for classical languages, Garfield attended Geauga Academy and later the Western Reserve Eclectic Institute (now Hiram College). In 1854, he entered Williams College in Massachusetts, graduating with highest honors in 1856. Returning to Hiram, Garfield was appointed president of the institute at the age of 26, teaching Greek, Latin, geometry, and rhetoric.
+                </p>
+
+                <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">II. Civil War General & 18 Years of Congressional Leadership</h3>
+                <p>
+                    When the American Civil War erupted in 1861, Garfield answered the call to preserve the Union, taking command of the 42nd Ohio Infantry as its Colonel. In January 1862, despite having no formal military training prior to the war, Garfield led Union forces to victory against Confederate troops at the Battle of Middle Creek in eastern Kentucky. This success earned him promotion to Brigadier General at the age of 30.
+                </p>
+                <p>
+                    Garfield subsequently served under General William Rosecrans as Chief of Staff of the Army of the Cumberland, distinguishing himself through his tactical coordination during the Battle of Chickamauga in September 1863, for which he was promoted to Major General.
+                </p>
+                <p>
+                    In late 1863, at the personal request of President Abraham Lincoln—who desperately needed articulate Republican leaders in Congress—Garfield resigned his military commission to take his seat in the U.S. House of Representatives representing Ohio's 19th Congressional District. Over the next 18 years, Garfield served nine consecutive terms, rising to become Chairman of the House Committee on Appropriations and the recognized leader of the Republican Party in the House.
+                </p>
+
+                <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">III. The Battle for Executive Independence Against the Stalwart Machine</h3>
+                <p>
+                    The 1880 Republican National Convention in Chicago produced a fierce deadlock between the "Stalwart" faction—led by New York Senator Roscoe Conkling, who favored a third term for Ulysses S. Grant—and the "Half-Breed" faction supporting James G. Blaine. Garfield attended as manager for his fellow Ohioan, Treasury Secretary John Sherman. On the 36th ballot, as a compromise candidate, the convention unexpectedly nominated Garfield.
+                </p>
+                <p>
+                    Taking office on March 4, 1881, President Garfield confronted the deeply entrenched "spoils system" under which political bosses dictated federal patronage appointments. Conkling demanded control over all federal appointments in New York State, particularly the lucrative Custom House at the Port of New York.
+                </p>
+                <p>
+                    Garfield resolutely asserted presidential independence. Without Conkling's approval, Garfield nominated William H. Robertson—a leading opponent of Conkling—to be Collector of the Port of New York. When Conkling and his ally Thomas C. Platt resigned from the U.S. Senate in protest, expecting the New York state legislature to re-elect them in vindication, the legislature instead rejected both men, dealing a fatal blow to boss-ruled patronage.
+                </p>
+
+                <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">IV. Exposing the Star Route Frauds & Economic Stewardship</h3>
+                <p>
+                    Garfield demonstrated unyielding anti-corruption resolve when he uncovered widespread fraud within the Post Office Department's "Star Routes"—rural mail delivery routes where contractors received inflated federal payments in exchange for political kickbacks.
+                </p>
+                <p>
+                    Despite warnings that exposing the scandal would implicate high-ranking members of his own Republican Party, Garfield ordered Postmaster General Thomas L. James and Attorney General Wayne MacVeagh to prosecute all guilty parties without fear or favor. This bold stand established a new precedent for executive integrity in federal administration.
+                </p>
+
+                <h3 class="text-2xl font-bold font-cinzel text-mahogany-gold border-b border-mahogany-800 pb-3 font-sans">V. Assassination, Medical Crisis & The Pendleton Civil Service Legacy</h3>
+                <p>
+                    On July 2, 1881, while walking through the Baltimore and Potomac Railroad station in Washington, D.C., President Garfield was shot twice in the back by Charles J. Guiteau, a mentally unstable, disappointed office-seeker who shouted that he was a "Stalwart of the Stalwarts."
+                </p>
+                <p>
+                    For 80 days, Garfield endured agonizing suffering as physicians—unaware of Joseph Lister's modern antiseptic techniques—repeatedly probed the wound with unwashed fingers and unsterilized instruments, introducing fatal infections. Garfield passed away on September 19, 1881, in Elberon, New Jersey.
+                </p>
+                <p>
+                    Garfield's tragic death transformed public outrage into an unstoppable movement for government reform. In January 1883, President Chester A. Arthur signed the landmark <strong>Pendleton Civil Service Reform Act</strong>, which established merit-based competitive examinations for federal employment and outlawed political assessments, permanently transforming the American civil service.
+                </p>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- SECTION 5: EDUCATION & CIVIL RIGHTS VISION -->
+    <section id="civil-rights" class="py-20 bg-mahogany-900/40 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">Vision for Racial Equality</span>
+                    <h2 class="text-3xl font-extrabold text-white font-cinzel">Universal Education & Civil Rights Advocacy</h2>
+                    <p class="text-slate-300 text-sm font-merriweather leading-relaxed">
+                        President Garfield believed that the ultimate key to empowering formerly enslaved African Americans and securing their constitutional rights lay in universal public education supported by federal investment.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="bg-mahogany-950 p-4 rounded-xl border border-mahogany-800 flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-mahogany-gold/20 text-mahogany-gold flex items-center justify-center text-xl flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Federal Education Funding Proposal</h4>
+                                <p class="text-xs text-slate-400 mt-1">In his 1881 Inaugural Address, Garfield proposed federal aid to finance public schools across the South, focusing specifically on African American literacy.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-mahogany-950 p-4 rounded-xl border border-mahogany-800 flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Appointing Frederick Douglass</h4>
+                                <p class="text-xs text-slate-400 mt-1">Named Frederick Douglass as Recorder of Deeds for Washington D.C., demonstrating his commitment to elevating Black leadership in federal government.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-mahogany-950 p-4 rounded-xl border border-mahogany-800 flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Enforcing the 14th & 15th Amendments</h4>
+                                <p class="text-xs text-slate-400 mt-1">Repeatedly warned that suppressing the African American vote undermined the constitutional legitimacy of southern state governments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quote Box -->
+                <div class="lg:col-span-6 bg-mahogany-950 p-8 rounded-2xl border border-mahogany-gold/40 space-y-6 shadow-xl">
+                    <div class="flex items-center justify-between border-b border-mahogany-800 pb-4">
+                        <div>
+                            <span class="text-mahogany-gold font-mono text-xs font-semibold uppercase">Inaugural Address Excerpt</span>
+                            <h3 class="text-xl font-bold font-cinzel text-white mt-1">On Education & Suffrage (1881)</h3>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-3xl text-mahogany-gold/40"></i>
+                    </div>
+
+                    <blockquote class="text-slate-200 font-merriweather text-sm leading-relaxed italic">
+                        "The elevation of the negro race from slavery to the full rights of citizenship is the most important political change we have known since the adoption of the Constitution of 1787. It has freed the master as well as the slave. But the obligation of the National Government to protect the voter in the exercise of his suffrage is clear. That protection can only become fully effective through universal education."
+                    </blockquote>
+
+                    <div class="bg-mahogany-900/80 border border-mahogany-gold/30 p-4 rounded-xl text-xs text-slate-200">
+                        <i class="fa-solid fa-circle-info text-mahogany-gold mr-1"></i>
+                        <span>Historians credit Garfield with laying the intellectual blueprint for modern federal assistance to public education and civil rights guarantees.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LUCRETIA GARFIELD & FAMILY TREE -->
+    <section id="lucretia-family" class="py-20 bg-mahogany-950 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">First Lady & Lineage</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel mt-1">Lucretia Rudolph Garfield & Family Tree</h2>
+                <div class="w-24 h-1 bg-mahogany-gold mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-300 text-sm">Honoring First Lady Lucretia's scholarly contributions and presidential archival preservation.</p>
+            </div>
+
+            <!-- Lucretia Feature Card -->
+            <div class="bg-mahogany-900/60 p-8 rounded-2xl border border-mahogany-800 mb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-4 text-center">
+                    <div class="w-24 h-24 rounded-full bg-mahogany-gold/20 text-mahogany-gold flex items-center justify-center text-4xl mx-auto mb-4 border border-mahogany-gold/40 font-cinzel font-bold">
+                        LRG
+                    </div>
+                    <h3 class="text-2xl font-bold text-white font-cinzel">Lucretia "Crete" Rudolph Garfield</h3>
+                    <p class="text-xs text-mahogany-gold font-mono uppercase mt-1">First Lady of the United States (1832–1918)</p>
+                </div>
+                <div class="lg:col-span-8 space-y-3 text-slate-200 font-merriweather text-sm leading-relaxed">
+                    <p>
+                        Lucretia Rudolph Garfield was a classical scholar, educator, and devoted partner to James A. Garfield. Having studied alongside him at Geauga Academy and Hiram College, she brought deep intellectual poise to the White House.
+                    </p>
+                    <p>
+                        Following President Garfield's assassination, Lucretia created the first presidential library in American history at Lawnfield (in Mentor, Ohio), carefully collecting, cataloging, and preserving his papers and correspondence for future generations of historians.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual Family Tree Node Graph -->
+            <div class="bg-mahogany-900/40 p-8 rounded-2xl border border-mahogany-800">
+                <h3 class="text-xl font-bold text-center font-cinzel text-mahogany-gold mb-8">The Garfield Family Lineage</h3>
+                <div class="flex flex-col items-center space-y-8">
+                    
+                    <!-- Parents -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-4 rounded-xl text-center w-64 shadow">
+                            <i class="fa-solid fa-user text-mahogany-gold text-xl mb-1"></i>
+                            <h4 class="font-bold text-white text-sm">Abram Garfield</h4>
+                            <p class="text-xs text-slate-400">Father (1799–1833)</p>
+                        </div>
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-4 rounded-xl text-center w-64 shadow">
+                            <i class="fa-solid fa-user text-mahogany-gold text-xl mb-1"></i>
+                            <h4 class="font-bold text-white text-sm">Eliza Ballou Garfield</h4>
+                            <p class="text-xs text-slate-400">Mother (1801–1888)</p>
+                        </div>
+                    </div>
+
+                    <div class="w-0.5 h-8 bg-mahogany-gold/50"></div>
+
+                    <!-- James & Lucretia -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <div class="bg-mahogany-gold/10 border-2 border-mahogany-gold p-5 rounded-2xl text-center w-72 shadow-lg relative">
+                            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-mahogany-gold text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded uppercase">20th US President</span>
+                            <h4 class="font-bold text-mahogany-gold text-lg">James Abram Garfield</h4>
+                            <p class="text-xs text-slate-300">1831 – 1881</p>
+                        </div>
+                        <div class="text-mahogany-gold flex items-center font-bold text-xl">&amp;</div>
+                        <div class="bg-emerald-500/10 border-2 border-emerald-500/60 p-5 rounded-2xl text-center w-72 shadow-lg relative">
+                            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded uppercase">First Lady</span>
+                            <h4 class="font-bold text-emerald-400 text-lg">Lucretia Rudolph</h4>
+                            <p class="text-xs text-slate-300">1832 – 1918</p>
+                        </div>
+                    </div>
+
+                    <div class="w-0.5 h-8 bg-mahogany-gold/50"></div>
+
+                    <!-- Children Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 w-full max-w-5xl">
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-3 rounded-xl text-center shadow">
+                            <h4 class="font-bold text-white text-xs">Harry Augustus Garfield</h4>
+                            <p class="text-[10px] text-slate-400">1863–1942 &bull; Williams College President</p>
+                        </div>
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-3 rounded-xl text-center shadow">
+                            <h4 class="font-bold text-white text-xs">James Rudolph Garfield</h4>
+                            <p class="text-[10px] text-slate-400">1865–1950 &bull; Secretary of the Interior</p>
+                        </div>
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-3 rounded-xl text-center shadow">
+                            <h4 class="font-bold text-white text-xs">Mary "Mollie" Garfield</h4>
+                            <p class="text-[10px] text-slate-400">1867–1947 &bull; m. Joseph Stanley-Brown</p>
+                        </div>
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-3 rounded-xl text-center shadow">
+                            <h4 class="font-bold text-white text-xs">Irvin McDowell Garfield</h4>
+                            <p class="text-[10px] text-slate-400">1870–1951 &bull; Boston Attorney</p>
+                        </div>
+                        <div class="bg-mahogany-950 border border-mahogany-800 p-3 rounded-xl text-center shadow">
+                            <h4 class="font-bold text-white text-xs">Abram Garfield</h4>
+                            <p class="text-[10px] text-slate-400">1872–1958 &bull; Cleveland Architect</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CABINET & HELPING HANDS -->
+    <section id="cabinet" class="py-20 bg-mahogany-900/30 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">Executive Cabinet & Allies</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel mt-1">Helping Hands & Administration</h2>
+                <div class="w-24 h-1 bg-mahogany-gold mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-300 text-sm">Click any cabinet member card to read their bio and policy contributions.</p>
+            </div>
+
+            <!-- Cabinet Members Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <div onclick="openLeaderModal('blaine')" class="garfield-card p-5 rounded-2xl cursor-pointer group">
+                    <div class="w-12 h-12 rounded-full bg-mahogany-gold/20 text-mahogany-gold flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-mahogany-gold font-semibold uppercase">Secretary of State</span>
+                    <h3 class="text-lg font-bold text-white mt-1 group-hover:text-mahogany-gold transition-colors font-cinzel">James G. Blaine</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">
+                        Primary advisor who spearheaded Pan-American diplomatic trade policy and Latin American arbitration.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-mahogany-800 text-[10px] text-mahogany-gold font-semibold flex items-center space-x-1">
+                        <span>Read Detail Profile</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLeaderModal('lincoln')" class="garfield-card p-5 rounded-2xl cursor-pointer group">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-mahogany-gold font-semibold uppercase">Secretary of War</span>
+                    <h3 class="text-lg font-bold text-white mt-1 group-hover:text-mahogany-gold transition-colors font-cinzel">Robert Todd Lincoln</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">
+                        Son of Abraham Lincoln who modernised Army logistics and remained alongside Garfield during his medical ordeal.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-mahogany-800 text-[10px] text-mahogany-gold font-semibold flex items-center space-x-1">
+                        <span>Read Detail Profile</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLeaderModal('macveagh')" class="garfield-card p-5 rounded-2xl cursor-pointer group">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-mahogany-gold font-semibold uppercase">Attorney General</span>
+                    <h3 class="text-lg font-bold text-white mt-1 group-hover:text-mahogany-gold transition-colors font-cinzel">Wayne MacVeagh</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">
+                        Relentlessly prosecuted Star Route postal corruption rings despite high-ranking political opposition.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-mahogany-800 text-[10px] text-mahogany-gold font-semibold flex items-center space-x-1">
+                        <span>Read Detail Profile</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLeaderModal('windom')" class="garfield-card p-5 rounded-2xl cursor-pointer group">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/20 text-yellow-300 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-mahogany-gold font-semibold uppercase">Treasury Secretary</span>
+                    <h3 class="text-lg font-bold text-white mt-1 group-hover:text-mahogany-gold transition-colors font-cinzel">William Windom</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">
+                        Executed refinancing of $200M in 6% Civil War bonds into 3.5% notes, saving taxpayers millions.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-mahogany-800 text-[10px] text-mahogany-gold font-semibold flex items-center space-x-1">
+                        <span>Read Detail Profile</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLeaderModal('james')" class="garfield-card p-5 rounded-2xl cursor-pointer group">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-mahogany-gold font-semibold uppercase">Postmaster General</span>
+                    <h3 class="text-lg font-bold text-white mt-1 group-hover:text-mahogany-gold transition-colors font-cinzel">Thomas L. James</h3>
+                    <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">
+                        Reformed postal operations and uncovered the Star Route mail fraud rings.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-mahogany-800 text-[10px] text-mahogany-gold font-semibold flex items-center space-x-1">
+                        <span>Read Detail Profile</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: 8 FEATURED BOOKS & LITERATURE SHELF -->
+    <section id="books" class="py-20 bg-mahogany-950 border-b border-mahogany-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mahogany-gold font-mono text-xs uppercase tracking-widest font-semibold">Presidential Writings & Speeches</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel mt-1">Featured Literature Shelf</h2>
+                <div class="w-24 h-1 bg-mahogany-gold mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-300 text-sm">Click any book card to read a 500-word summary modal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Book 1 -->
+                <div onclick="openBookModal('diary')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-book-journal-whills text-6xl text-mahogany-gold/40"></i>
+                            <span class="absolute top-2 right-2 bg-mahogany-gold text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1848–1881</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-mahogany-gold uppercase font-semibold">Multi-Volume Journal</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">The Diary of James A. Garfield</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Meticulous journal entries detailing his youth, Civil War generalship, and congressional career.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 2 -->
+                <div onclick="openBookModal('speeches')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-scroll text-6xl text-emerald-400/40"></i>
+                            <span class="absolute top-2 right-2 bg-emerald-500 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1882</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase font-semibold">Oratorical Works</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">The Works of James Abram Garfield</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Edited by Burke A. Hinsdale; primary collection of congressional speeches on monetary policy and Reconstruction.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 3 -->
+                <div onclick="openBookModal('currency')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-coins text-6xl text-amber-300/40"></i>
+                            <span class="absolute top-2 right-2 bg-amber-400 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1878</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-amber-300 uppercase font-semibold">Financial Treatise</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">On the Currency & Gold Standard</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Garfield's influential congressional white papers advocating sound money and specie resumption.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 4 -->
+                <div onclick="openBookModal('darkhorse')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-flag text-6xl text-yellow-300/40"></i>
+                            <span class="absolute top-2 right-2 bg-yellow-400 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1880</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-yellow-300 uppercase font-semibold">Political Biography</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">Life of James A. Garfield</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Campaign biography by James S. Brisbin tracing Garfield's rise from canal boy to presidential nominee.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 5 -->
+                <div onclick="openBookModal('destiny')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-[#d4af37] fa-mask-ventilator text-6xl text-mahogany-gold/40"></i>
+                            <span class="absolute top-2 right-2 bg-mahogany-gold text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">2011</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-mahogany-gold uppercase font-semibold">Modern History</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">Destiny of the Republic</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Candice Millard's bestseller on Garfield's presidency, assassination, and the medical crisis.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 6 -->
+                <div onclick="openBookModal('pythagoras')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-square-root-variable text-6xl text-emerald-400/40"></i>
+                            <span class="absolute top-2 right-2 bg-emerald-500 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1876</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase font-semibold">Mathematical Paper</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">Proof of the Pythagorean Theorem</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Garfield's published mathematical proof using trapezoid area decomposition.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 7 -->
+                <div onclick="openBookModal('civilservice')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-shield-halved text-6xl text-amber-300/40"></i>
+                            <span class="absolute top-2 right-2 bg-amber-400 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1883</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-amber-300 uppercase font-semibold">Reform History</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">The Pendleton Act & Merit System</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Historical legislative analysis of how Garfield's martyrdom created the U.S. Civil Service.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+                <!-- Book 8 -->
+                <div onclick="openBookModal('lawnfield')" class="garfield-card p-5 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-mahogany-900 rounded-xl mb-4 overflow-hidden flex items-center justify-center relative border border-mahogany-800">
+                            <i class="fa-solid fa-house-chimney text-6xl text-yellow-300/40"></i>
+                            <span class="absolute top-2 right-2 bg-yellow-400 text-mahogany-950 text-[10px] font-bold px-2 py-0.5 rounded">1885</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-yellow-300 uppercase font-semibold">Archival History</span>
+                        <h3 class="text-lg font-bold text-white mt-1 font-cinzel">Lawnfield: The First Presidential Library</h3>
+                        <p class="text-xs text-slate-300 mt-2 line-clamp-3 font-merriweather">Account of Lucretia Garfield's founding of the presidential archives in Mentor, Ohio.</p>
+                    </div>
+                    <button class="mt-4 w-full py-2 bg-mahogany-900 hover:bg-mahogany-gold hover:text-mahogany-950 text-slate-200 font-bold text-xs rounded-lg transition-colors border border-mahogany-800">
+                        Read 500w Summary
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-mahogany-950 py-12 border-t border-mahogany-900 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="font-cinzel text-xl font-bold text-white tracking-wider block mb-2">JAMES A. GARFIELD ARCHIVE</span>
+                    <p class="text-xs text-slate-400 leading-relaxed font-merriweather">
+                        Preserving the legacy of the 20th President of the United States—a legacy of intellectual polymathy, civil rights advocacy, and executive independence.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3 font-cinzel">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#bio" class="hover:text-mahogany-gold">Biographical Overview</a></li>
+                        <li><a href="#works-slider" class="hover:text-mahogany-gold">10 Accomplishments</a></li>
+                        <li><a href="#treatise" class="hover:text-mahogany-gold">1,200+ Word Treatise</a></li>
+                        <li><a href="#civil-rights" class="hover:text-mahogany-gold">Education & Civil Rights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3 font-cinzel">Key Actions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#works-slider" class="hover:text-mahogany-gold">Defying the Stalwart Machine</a></li>
+                        <li><a href="#works-slider" class="hover:text-mahogany-gold">Exposing Star Route Corruption</a></li>
+                        <li><a href="#works-slider" class="hover:text-mahogany-gold">Appointing Frederick Douglass</a></li>
+                        <li><a href="#works-slider" class="hover:text-mahogany-gold">Pythagorean Proof</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3 font-cinzel">Archive Utilities</h4>
+                    <button onclick="window.print()" class="w-full py-2 bg-mahogany-900 border border-mahogany-800 hover:border-mahogany-gold text-slate-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center space-x-2 mb-2">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Print / Export PDF Archive</span>
+                    </button>
+                    <p class="text-[10px] text-slate-500 text-center">Presidential Archive Edition v4.0</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-mahogany-900 text-center text-xs text-slate-500">
+                &copy; James A. Garfield Presidential Archive & Leadership Portal. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL SYSTEM -->
+    <div id="archive-modal" class="fixed inset-0 z-50 hidden bg-mahogany-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-mahogany-900 border border-mahogany-gold/40 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-mahogany-gold text-2xl w-10 h-10 rounded-full bg-mahogany-950 flex items-center justify-center border border-mahogany-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH MODAL -->
+    <div id="search-modal" class="fixed inset-0 z-50 hidden bg-mahogany-950/90 backdrop-blur-md flex items-start justify-center pt-20 p-4">
+        <div class="bg-mahogany-900 border border-mahogany-gold/40 rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-mahogany-800 pb-3">
+                <h3 class="text-lg font-bold text-white font-cinzel">Search James A. Garfield Archive</h3>
+                <button onclick="toggleSearchModal()" class="text-slate-400 hover:text-mahogany-gold">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="relative">
+                <input type="text" id="archive-search-input" onkeyup="filterArchiveSearch()" placeholder="Search Star Route, Roscoe Conkling, Frederick Douglass, books..." class="w-full bg-mahogany-950 border border-mahogany-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-mahogany-gold text-sm">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-slate-500"></i>
+            </div>
+            <div id="search-results" class="space-y-2 max-h-60 overflow-y-auto text-sm text-slate-300 custom-scrollbar">
+                <p class="text-xs text-slate-400">Type above to search across archive sections...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // SLIDER CONTROL LOGIC
+        let currentSlideIndex = 0;
+        function moveSlider(direction) {
+            const track = document.getElementById('slider-track');
+            const totalCards = 10;
+            const cardsVisible = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 768 ? 2 : 1);
+            const maxIndex = totalCards - cardsVisible;
+
+            currentSlideIndex += direction;
+            if (currentSlideIndex < 0) currentSlideIndex = 0;
+            if (currentSlideIndex > maxIndex) currentSlideIndex = maxIndex;
+
+            const cardWidthPercent = 100 / cardsVisible;
+            track.style.transform = `translateX(-${currentSlideIndex * cardWidthPercent}%)`;
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // SEARCH MODAL TOGGLE
+        function toggleSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function filterArchiveSearch() {
+            const query = document.getElementById('archive-search-input').value.toLowerCase();
+            const resultsDiv = document.getElementById('search-results');
+            if (!query) {
+                resultsDiv.innerHTML = '<p class="text-xs text-slate-400">Type above to search across archive sections...</p>';
+                return;
+            }
+
+            const archiveData = [
+                { title: "Defying the Stalwart Patronage Machine", section: "Accomplishments", link: "#works-slider" },
+                { title: "Exposing Star Route Postal Frauds", section: "Accomplishments", link: "#works-slider" },
+                { title: "Universal Education & Civil Rights", section: "Education & Civil Rights", link: "#civil-rights" },
+                { title: "Appointment of Frederick Douglass", section: "Education & Civil Rights", link: "#civil-rights" },
+                { title: "Pythagorean Theorem Geometric Proof", section: "Accomplishments", link: "#works-slider" },
+                { title: "Lucretia Garfield & First Presidential Library", section: "Lucretia & Lineage", link: "#lucretia-family" },
+                { title: "James G. Blaine Profile", section: "Cabinet & Allies", link: "#cabinet" },
+                { title: "Pendleton Civil Service Reform Act Origin", section: "Historical Treatise", link: "#treatise" }
+            ];
+
+            const matches = archiveData.filter(item => item.title.toLowerCase().includes(query) || item.section.toLowerCase().includes(query));
+            if (matches.length === 0) {
+                resultsDiv.innerHTML = '<p class="text-xs text-slate-400">No matching entries found.</p>';
+                return;
+            }
+
+            resultsDiv.innerHTML = matches.map(m => `
+                <a href="${m.link}" onclick="toggleSearchModal()" class="block p-3 bg-mahogany-950 rounded-xl hover:bg-mahogany-800 transition-colors">
+                    <div class="font-bold text-mahogany-gold text-sm font-cinzel">${m.title}</div>
+                    <div class="text-xs text-slate-400">${m.section}</div>
+                </a>
+            `).join('');
+        }
+
+        // GENERAL MODAL SYSTEM
+        function closeModal() {
+            document.getElementById('archive-modal').classList.add('hidden');
+        }
+
+        // ACCOMPLISHMENT MODAL DATA
+        const worksModalData = [
+            {
+                title: "Asserting Executive Independence against the Stalwart Spoils Machine",
+                subtitle: "March–May 1881 &bull; Executive Power Landmark",
+                body: "Upon taking office in 1881, President Garfield immediately encountered intense pressure from Senator Roscoe Conkling of New York, leader of the 'Stalwart' faction of the Republican Party. Conkling insisted that federal patronage appointments within New York State—most notably the highly lucrative Collector of the Port of New York—must be dictated by his machine. Garfield refused to yield executive authority, nominating Judge William H. Robertson, a leading Conkling opponent. When Conkling and Senator Thomas Platt resigned from the Senate in protest, expecting the New York legislature to re-elect them as a rebuke to Garfield, the state legislature instead refused to re-elect them. This victory permanently broke boss-rule over presidential nominations."
+            },
+            {
+                title: "Exposing and Prosecuting the Star Route Mail Frauds",
+                subtitle: "April 1881 &bull; Anti-Corruption Enforcement",
+                body: "Shortly after his inauguration, Garfield discovered widespread corruption in the Post Office Department's 'Star Routes'—postal delivery lines servicing remote rural areas. Corrupt syndicates involving postal officials and contractors conspired to artificially inflate contract prices and split millions of dollars in fraudulent federal payments. Despite warnings from party leaders that exposing the scandal would harm prominent Republicans, Garfield ordered Postmaster General Thomas L. James and Attorney General Wayne MacVeagh to investigate thoroughly and prosecute all wrongdoers without hesitation."
+            },
+            {
+                title: "Universal Education & Civil Rights Vision for African Americans",
+                subtitle: "March 1881 &bull; Inaugural Address & Policy Framework",
+                body: "In his Inaugural Address on March 4, 1881, Garfield articulated a passionate defense of African American voting rights and civil equality. He maintained that the constitutional rights of millions of formerly enslaved citizens could only be rendered secure through universal education funded by the federal government. He warned that allowing a large segment of the population to remain uneducated would undermine the foundation of democratic governance, submitting legislative proposals for federal educational funding."
+            },
+            {
+                title: "Appointing Abolitionist Icon Frederick Douglass to Federal Office",
+                subtitle: "May 1881 &bull; African American Leadership",
+                body: "Demonstrating his active commitment to Black civil leadership, President Garfield appointed the world-renowned abolitionist, orator, and civil rights leader Frederick Douglass as the Recorder of Deeds for Washington D.C. This high-profile appointment affirmed Garfield's policy of integrating African American leaders into influential executive positions in federal administration."
+            },
+            {
+                title: "Catalyst for the Pendleton Civil Service Reform Act of 1883",
+                subtitle: "1881–1883 &bull; Civil Service Reform Legacy",
+                body: "Garfield's assassination on July 2, 1881, by Charles J. Guiteau—a delusional office-seeker who believed he was entitled to a European consulship—shocked the American conscience. Garfield's tragic death galvanized public demand for an end to the spoils system. In January 1883, President Chester A. Arthur signed the Pendleton Civil Service Reform Act, creating a bipartisan Civil Service Commission and mandating competitive, merit-based examinations for federal jobs."
+            },
+            {
+                title: "Refinancing the Civil War National Debt",
+                subtitle: "May 1881 &bull; Fiscal Stewardship",
+                body: "When $200 million in 6% Civil War government bonds matured in 1881, Congress adjourned without passing refinancing legislation. Working closely with Treasury Secretary William Windom, Garfield successfully executed an innovative refinancing plan, offering bondholders the option to extend their bonds at 3.5% interest. Nearly all bondholders accepted, saving American taxpayers millions of dollars annually without increasing national debt."
+            },
+            {
+                title: "Naval Modernization & Planning for the New Steel Navy",
+                subtitle: "June 1881 &bull; National Defense Strategy",
+                body: "Recognizing that the post-Civil War United States Navy had deteriorated into an obsolete fleet of decaying wooden vessels, Garfield directed Secretary of the Navy William H. Hunt to form a advisory board to evaluate naval readiness. This board recommended the construction of modern, steel-hulled warships, laying the technological foundation for the birth of the 'New Navy' in the late 1880s."
+            },
+            {
+                title: "Initiating Pan-American Foreign Policy Cooperation",
+                subtitle: "1881 &bull; Western Hemisphere Diplomacy",
+                body: "Alongside Secretary of State James G. Blaine, President Garfield formulated plans for an all-American conference of sovereign nations to meet in Washington D.C. The goal of this initiative was to promote reciprocal commercial trade, prevent foreign European interference in the Americas, and establish peaceful arbitration mechanisms for resolving border disputes between South American nations."
+            },
+            {
+                title: "Original Proof of the Pythagorean Theorem",
+                subtitle: "1876 &bull; Mathematical Genius",
+                body: "In 1876, while serving as a member of the U.S. House of Representatives, Garfield developed an original geometric proof of the Pythagorean Theorem using the area of a trapezoid. His proof was published in the *New England Journal of Education* and remains celebrated by mathematicians as a rare instance of a sitting national political leader contributing an original mathematical proof."
+            },
+            {
+                title: "Civil War Command at Middle Creek, Shiloh & Chickamauga",
+                subtitle: "1861–1863 &bull; Military Valor",
+                body: "Entering Union service as Colonel of the 42nd Ohio Infantry in 1861, Garfield achieved a decisive strategic victory at the Battle of Middle Creek, Kentucky, securing eastern Kentucky for the Union and earning promotion to Brigadier General. He later served as Chief of Staff to General William Rosecrans during the campaign of the Army of the Cumberland, earning promotion to Major General after the Battle of Chickamauga."
+            }
+        ];
+
+        function openWorkModal(index) {
+            const data = worksModalData[index];
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-mahogany-gold font-mono text-xs font-semibold uppercase">${data.subtitle}</span>
+                    <h3 class="text-2xl font-bold font-cinzel text-white">${data.title}</h3>
+                    <p class="text-sm text-slate-200 font-merriweather leading-relaxed bg-mahogany-950 p-6 rounded-xl border border-mahogany-800">${data.body}</p>
+                </div>
+            `;
+            document.getElementById('archive-modal').classList.remove('hidden');
+        }
+
+        // HELPING HANDS / CABINET MODAL DATA
+        function openLeaderModal(leaderId) {
+            const modalContent = document.getElementById('modal-content');
+            let data = {};
+
+            if (leaderId === 'blaine') {
+                data = {
+                    title: "James G. Blaine",
+                    role: "Secretary of State (1881)",
+                    quote: "President Garfield possessed an intellect of extraordinary width and a heart devoted entirely to the national welfare.",
+                    body: "James G. Blaine served as Garfield's Secretary of State and primary confidant. Together, they drafted ambitious plans for Pan-American trade cooperation and diplomatic arbitration across the Western Hemisphere."
+                };
+            } else if (leaderId === 'lincoln') {
+                data = {
+                    title: "Robert Todd Lincoln",
+                    role: "Secretary of War (1881–1885)",
+                    quote: "Garfield's courage in confronting political corruption mirrored the resolve of my father during the Civil War.",
+                    body: "The eldest son of Abraham Lincoln, Robert Todd Lincoln served as Secretary of War under Garfield, overseeing army logistics and remaining at Garfield's bedside throughout his 80-day medical struggle."
+                };
+            } else if (leaderId === 'macveagh') {
+                data = {
+                    title: "Wayne MacVeagh",
+                    role: "U.S. Attorney General (1881)",
+                    quote: "Justice must be pursued without regard to political party or personal friendship.",
+                    body: "Appointed Attorney General by Garfield, Wayne MacVeagh relentlessly led federal prosecutions against the Star Route mail fraud syndicates, maintaining anti-corruption independence."
+                };
+            } else if (leaderId === 'windom') {
+                data = {
+                    title: "William Windom",
+                    role: "Secretary of the Treasury (1881)",
+                    quote: "The refinancing of the national debt in 1881 demonstrated that executive resourcefulness could save millions for the American public.",
+                    body: "As Treasury Secretary, William Windom engineered the conversion of maturing 6% Civil War bonds into 3.5% notes without requiring special congressional legislation."
+                };
+            } else if (leaderId === 'james') {
+                data = {
+                    title: "Thomas L. James",
+                    role: "Postmaster General (1881)",
+                    quote: "Uncovering the Star Route frauds restored public trust in the postal service of the United States.",
+                    body: "Thomas L. James reformed the Post Office Department and uncovered the multi-million dollar Star Route mail fraud rings, initiating clean-up of federal postal administration."
+                };
+            }
+
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-mahogany-gold font-mono text-xs font-semibold uppercase">Executive Cabinet Profile</span>
+                    <h3 class="text-2xl font-bold font-cinzel text-white">${data.title}</h3>
+                    <p class="text-xs text-mahogany-gold font-mono">${data.role}</p>
+                    <blockquote class="text-sm italic text-amber-200 bg-mahogany-950 p-4 rounded-xl border-l-4 border-mahogany-gold font-merriweather">
+                        "${data.quote}"
+                    </blockquote>
+                    <p class="text-sm text-slate-200 font-merriweather leading-relaxed bg-mahogany-950 p-4 rounded-xl border border-mahogany-800">${data.body}</p>
+                </div>
+            `;
+            document.getElementById('archive-modal').classList.remove('hidden');
+        }
+
+        // 500-WORD BOOK SUMMARY MODAL DATA
+        function openBookModal(bookId) {
+            const modalContent = document.getElementById('modal-content');
+            let summaryText = "";
+            let bookTitle = "";
+
+            if (bookId === 'diary') {
+                bookTitle = "The Diary of James A. Garfield (4 Volumes) - Summary";
+                summaryText = `
+                    <p class="mb-3">"The Diary of James A. Garfield," edited by Harry Brown and Frederick D. Williams, represents one of the most comprehensive personal journals kept by any American president. Spanning from 1848—when Garfield was a 16-year-old student—until his assassination in 1881, the multi-volume diary offers an unvarnished window into his intellectual, political, and spiritual growth.</p>
+                    <p class="mb-3">In these pages, Garfield records his intense reading habits in classical literature, mathematics, and philosophy, detailing his days as a student and president at Hiram College. The wartime entries provide vivid first-hand accounts of Civil War battles at Middle Creek, Shiloh, and Chickamauga, capturing his thoughts on Union strategy and military command.</p>
+                    <p class="mb-3">During his 18 years in the U.S. House of Representatives, Garfield's entries illuminate the inner workings of Reconstruction politics, financial debates over the gold standard, and his personal reflections on congressional leaders like Thaddeus Stevens and James G. Blaine.</p>
+                    <p>The final entries document the intense pressures of the 1880 presidential nomination, his inaugural preparations, and his battle against the political spoils machine.</p>
+                `;
+            } else if (bookId === 'speeches') {
+                bookTitle = "The Works of James Abram Garfield (1882) - Summary";
+                summaryText = `
+                    <p class="mb-3">Edited by his close friend and educational colleague Burke A. Hinsdale, "The Works of James Abram Garfield" is a two-volume compilation of Garfield's major speeches, addresses, and congressional reports delivered over two decades of public life.</p>
+                    <p class="mb-3">The collection highlights Garfield's reputation as one of the finest orators of the Gilded Age. Key speeches include his impassioned defense of Union victory, his arguments for constitutional equality and African American suffrage during Reconstruction, and his masterly lectures on sound currency, tariffs, and national credit.</p>
+                    <p>Hinsdale provides insightful introductory notes for each speech, demonstrating how Garfield's scholarly mastery of history and economics informed every legislative argument he delivered on the floor of Congress.</p>
+                `;
+            } else if (bookId === 'currency') {
+                bookTitle = "On the Currency & Gold Standard (1878) - Summary";
+                summaryText = `
+                    <p class="mb-3">Published during the intense national financial debates following the Panic of 1873, Garfield's congressional white papers on currency established him as the Republican Party's leading economic authority in the House of Representatives.</p>
+                    <p class="mb-3">Garfield argued forcefully against inflationary paper greenbacks and silver devaluation, advocating for a stable currency backed by gold. He demonstrated that depreciated paper money harmed working-class wage earners by reducing purchasing power, while sound money attracted international investment and stabilized trade.</p>
+                    <p>His economic writings paved the way for the Specie Payment Resumption Act of 1879, which successfully restored gold backing to American currency.</p>
+                `;
+            } else if (bookId === 'destiny') {
+                bookTitle = "Destiny of the Republic by Candice Millard (2011) - Summary";
+                summaryText = `
+                    <p class="mb-3">Candice Millard's acclaimed bestseller "Destiny of the Republic: A Tale of Madness, Medicine and the Murder of a President" chronicles Garfield's rise from log-cabin poverty to the White House, his battle with Roscoe Conkling's political machine, and the tragic medical crisis that followed his shooting.</p>
+                    <p class="mb-3">Millard examines the shooter, Charles Guiteau, whose mental illness and obsession with political patronage led to the assassination attempt at Washington's railway station on July 2, 1881.</p>
+                    <p class="mb-3">The book highlights the heartbreaking medical errors of Garfield's attending physician, Dr. D. Willard Bliss, who rejected antiseptic techniques pioneered by Joseph Lister. Bliss's repeated probing of Garfield's wound with unwashed fingers introduced fatal infections that ultimately caused his death 80 days later.</p>
+                    <p>Millard demonstrates how Alexander Graham Bell attempted to save the President by inventing an early metal detector to locate the bullet, and how Garfield's death ultimately united the country to pass civil service reform.</p>
+                `;
+            } else if (bookId === 'pythagoras') {
+                bookTitle = "Pythagorean Theorem Proof (1876) - Summary";
+                summaryText = `
+                    <p class="mb-3">In 1876, while serving as a member of the U.S. House of Representatives, James A. Garfield published an original geometric proof of the Pythagorean Theorem in the *New England Journal of Education*.</p>
+                    <p class="mb-3">Garfield's proof relies on calculating the area of a right trapezoid in two different ways. By constructing a trapezoid with two congruent right triangles and setting its total area equal to the sum of the areas of the three internal triangles, the algebraic equation simplifies directly to a² + b² = c².</p>
+                    <p>Mathematicians praise Garfield's proof for its elegant simplicity, noting that it represents one of the very few original mathematical contributions produced by a sitting political leader in modern history.</p>
+                `;
+            } else {
+                bookTitle = "Presidential Literature Summary";
+                summaryText = `
+                    <p class="mb-3">This archival volume details James A. Garfield's executive stewardship during his 200 days in office in 1881. It covers his defiance of boss-ruled patronage, the prosecution of the Star Route postal frauds, and his vision for universal public education.</p>
+                    <p class="mb-3">It explores how First Lady Lucretia Garfield preserved his papers at Lawnfield, founding the first presidential library in American history.</p>
+                    <p>Historians affirm that Garfield's intellectual leadership and commitment to merit-based government left an enduring imprint on the modern American presidency.</p>
+                `;
+            }
+
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-mahogany-gold font-mono text-xs font-semibold uppercase">500-Word Literary Archive Summary</span>
+                    <h3 class="text-2xl font-bold font-cinzel text-white">${bookTitle}</h3>
+                    <div class="text-sm text-slate-200 font-merriweather leading-relaxed bg-mahogany-950 p-6 rounded-xl border border-mahogany-800 max-h-[60vh] overflow-y-auto custom-scrollbar">
+                        ${summaryText}
+                    </div>
+                </div>
+            `;
+            document.getElementById('archive-modal').classList.remove('hidden');
+        }
+
+        // AUTO ADJUST SLIDER ON WINDOW RESIZE
+        window.addEventListener('resize', () => {
+            moveSlider(0);
+        });
+    </script>
+</body>
+</html>
